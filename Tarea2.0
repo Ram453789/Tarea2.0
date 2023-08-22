@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+#define FHR 32
+#define CFC 5/9
+#define CCF 9/5.0
+int main (int argc,char **argv)
+{
+	int farenheit = 250; 
+	int celcius = 40;
+	float rest;
+	float conv;
+	float mult;
+	
+	printf("Grados Farenheit asignados %d\n", farenheit );  
+	printf("Grados Celcius asignados %d\n", celcius);
+	
+    rest=farenheit - FHR;
+    conv= rest * CFC;
+    printf("Conversion de grados Farenheit a Celcius %f\n", conv);
+    
+    mult= CCF * celcius; 
+	conv= mult + FHR;
+	printf("Conversion de grados Celcius a Farenheit %f\n", conv);
+	return 0;
+}
